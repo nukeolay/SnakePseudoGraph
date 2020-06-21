@@ -98,6 +98,7 @@ public class Room {
         }
 
         //Выводим сообщение "Game Over"
+        System.out.println("Game Over!");
         if (snake.getSections().size() > highScore) {
             System.out.println("!!! New High Score - " + snake.getSections().size() + " !!!");
             try {
@@ -109,7 +110,6 @@ public class Room {
             }
 
         }
-        System.out.println("Game Over!");
     }
 
     /**
@@ -132,7 +132,7 @@ public class Room {
         matrix[mouse.getY()][mouse.getX()] = 3;
 
         //Выводим все это на экран
-        String[] symbols = {" . ", " x ", " X ", "^_^", "RIP"};
+        String[] symbols = {" . ", " o ", " 0 ", "^_^", "RIP"};
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
                 System.out.print(symbols[matrix[y][x]]);
